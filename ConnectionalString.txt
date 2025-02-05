@@ -1,0 +1,16 @@
+Database First;
+Scaffold-DbContext "server=ALEE; database=MoneyManager; trusted_connection=true; trustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir "Models"
+
+Code First;
+server=MR_SHERRY\\SQLEXPRESS; database=hospitaldb; trusted_connection=true; Integrated Security=True; MultipleActiveResultSets=true; trustServerCertificate=True;
+
+
+Crystal Report
+string connectionString = @"Data Source=MR_SHERRY\SQLEXPRESS;Initial Catalog=KhalidRashid_2223;Integrated Security=True;TrustServerCertificate=True;";
+
+
+inConnectionString(Code First)
+Data Source=MR_SHERRY\\SQLEXPRESS;Initial Catalog=KhalidRashid_2223;Integrated Security=True;TrustServerCertificate=True;
+
+program cs connection string:
+builder.Services.AddDbContext<StudentContext>(options=>options.UseSqlServer(builder.Configuration.GetConnectionString("dbcs")));
